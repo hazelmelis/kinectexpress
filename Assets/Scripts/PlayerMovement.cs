@@ -17,8 +17,8 @@ public class PlayerMovement : MonoBehaviour
         Vector3 terrainPos = Terrain.activeTerrain.transform.position;
         Vector3 terrainSize = Terrain.activeTerrain.terrainData.size;
 
-        float rightLimit = terrainPos.x + terrainSize.x / 2;
-        float leftLimit = terrainPos.x - terrainSize.x / 2;
+        float rightLimit = terrainPos.x + terrainSize.x / 2 - 1.5f;
+        float leftLimit = terrainPos.x - terrainSize.x / 2 + 1f;
 
         transform.Translate(Vector3.forward * Time.deltaTime * playerSpeed, Space.World);
         if (Keyboard.current.aKey.isPressed || Keyboard.current.leftArrowKey.isPressed)
